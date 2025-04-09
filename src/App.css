@@ -1,0 +1,17 @@
+.container {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.repo-card {
+  padding: 10px;
+  margin-bottom: 10px;
+}
