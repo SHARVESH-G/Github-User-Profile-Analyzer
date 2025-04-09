@@ -20,7 +20,12 @@ const useFetchRepos = () => {
     setSearched(true);
 
     try {
-      const response = await fetch(`https://api.github.com/users/${username}/repos`)
+      const response = await fetch(`https://api.github.com/users/${username}/repos`, {
+        headers: {
+          Authorization: `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
+        }
+      });
+
       if (response.status === 404) {
         setRepos([]);
         setError("No user found with that name");
